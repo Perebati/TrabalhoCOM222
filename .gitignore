@@ -10,7 +10,10 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-*.idea
+# file: ~/.gitignore_global
+.DS_Store
+.idea
+.mvn
 
 # Package Files #
 *.jar
