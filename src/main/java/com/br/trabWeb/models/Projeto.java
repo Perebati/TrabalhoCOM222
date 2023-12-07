@@ -28,8 +28,7 @@ public class Projeto {
     @Size(max = 64)
     private String fotoUrl;
 
-    @ElementCollection
-    private List<String> autores;
+    private String autores;
 
     private LocalDateTime data;
 
@@ -39,7 +38,7 @@ public class Projeto {
     public Projeto() {
     }
 
-    public Projeto(Long id, Usuario usuario, String titulo, String descricao, String fotoUrl, List<String> autores, LocalDateTime data, String linkRepositorio) {
+    public Projeto(Long id, Usuario usuario, String titulo, String descricao, String fotoUrl, String autores, LocalDateTime data, String linkRepositorio) {
         this.id = id;
         this.usuario = usuario;
         this.titulo = titulo;
@@ -90,11 +89,11 @@ public class Projeto {
         this.fotoUrl = fotoUrl;
     }
 
-    public List<String> getAutores() {
+    public String getAutores() {
         return autores;
     }
 
-    public void setAutores(List<String> autores) {
+    public void setAutores(String autores) {
         this.autores = autores;
     }
 

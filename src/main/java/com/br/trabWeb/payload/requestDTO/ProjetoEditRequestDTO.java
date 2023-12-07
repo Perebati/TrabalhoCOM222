@@ -12,7 +12,7 @@ public class ProjetoEditRequestDTO {
 
     private String fotoUrl;
 
-    private List<String> autores;
+    private String autores;
 
     private LocalDateTime data;
 
@@ -21,7 +21,7 @@ public class ProjetoEditRequestDTO {
     public ProjetoEditRequestDTO() {
     }
 
-    public ProjetoEditRequestDTO(Long projetoId, String titulo, String descricao, String fotoUrl, List<String> autores, LocalDateTime data, String linkRepositorio) {
+    public ProjetoEditRequestDTO(Long projetoId, String titulo, String descricao, String fotoUrl, String autores, LocalDateTime data, String linkRepositorio) {
         this.projetoId = projetoId;
         this.titulo = titulo;
         this.descricao = descricao;
@@ -63,11 +63,11 @@ public class ProjetoEditRequestDTO {
         this.fotoUrl = fotoUrl;
     }
 
-    public List<String> getAutores() {
+    public String getAutores() {
         return autores;
     }
 
-    public void setAutores(List<String> autores) {
+    public void setAutores(String autores) {
         this.autores = autores;
     }
 

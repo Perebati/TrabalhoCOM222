@@ -10,7 +10,7 @@ public class ProjetoRequestDTO {
 
     private String fotoUrl;
 
-    private List<String> autores;
+    private String autores;
 
     private LocalDateTime data;
 
@@ -19,7 +19,7 @@ public class ProjetoRequestDTO {
     public ProjetoRequestDTO() {
     }
 
-    public ProjetoRequestDTO(String titulo, String descricao, String fotoUrl, List<String> autores, LocalDateTime data, String linkRepositorio) {
+    public ProjetoRequestDTO(String titulo, String descricao, String fotoUrl, String autores, LocalDateTime data, String linkRepositorio) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.fotoUrl = fotoUrl;
@@ -52,11 +52,11 @@ public class ProjetoRequestDTO {
         this.fotoUrl = fotoUrl;
     }
 
-    public List<String> getAutores() {
+    public String getAutores() {
         return autores;
     }
 
-    public void setAutores(List<String> autores) {
+    public void setAutores(String autores) {
         this.autores = autores;
     }
 
