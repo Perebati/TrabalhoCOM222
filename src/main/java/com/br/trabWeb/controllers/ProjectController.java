@@ -152,4 +152,18 @@ public class ProjectController {
             throw new Exception(e.getMessage());
         }
     }
+
+    @GetMapping("/getProjects/{user}")
+    public List<Projeto> getProjectsUser(@PathVariable String user) throws Exception {
+        try {
+            Long userId = this.usuarioRepository.findUsuarioByUsername(user);
+            Usuario usuario = this.usuarioRepository.findUsuarioById(userId);
+
+            return this.projetoRepository.findAllByUsuario(usuario);
+
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
+
 }
